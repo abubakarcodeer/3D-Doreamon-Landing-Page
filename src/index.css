@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme{
+    --color-primary: #0371b7;
+}
+
+@layer components{
+    .container{
+        @apply mx-auto p-[1rem] sm:px-[3rem];
+    }
+    .navlink{
+        @apply text-xl inline-block px-6 py-2 font-semibold text-gray-500 hover:text-black;
+    }
+    .primary-btn{
+        @apply bg-gradient-to-r from-primary/80 to-primary hover:bg-gradient-to-l duration-200 text-white font-semibold px-6 py-2 rounded-full;
+    }
+    .arrow-btn{
+        @apply rounded-full p-2 shadow-md hover:scale-110 duration-200;
+    }
+}
+@layer{
+    .center{
+        @apply flex items-center justify-center
+    }
+}
+canvas{
+    display: block !important;
+    height: 20vh  !important;
+     width: 100% !important;
+}
+@media (min-width: 768px) {
+    canvas{
+    height: 100vh !important;
+}
+}
+@media (min-width: 640px) and (max-width:767px) {
+    canvas{
+    height: 40vh !important;
+}
+}
+::-webkit-scrollbar{
+    display: none;
+}
