@@ -1,12 +1,33 @@
-# React + Vite
+# 🎨 3D Doraemon Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and interactive **3D Doraemon landing page** built using **React + Three.js** technologies.  
+The project focuses on smooth 3D rendering, lightweight animations, and optimized performance.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** – Component-based UI development
+- **Vite** – Fast build tool and development server
+- **Three.js** – Core 3D rendering engine
+- **@react-three/fiber** – React renderer for Three.js
+- **@react-three/drei** – Useful helpers and abstractions for Three.js
+- **AOS (Animate On Scroll)** – Lightweight scroll-based animations
+- **React Icons** – Clean and scalable icons
+- **Tailwind CSS** – Utility-first styling
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎭 Interactive 3D Doraemon model
+- 🌐 Smooth camera and object animations
+- ⚡ Lightweight scroll animations using AOS
+- 📦 Optimized bundle size with manual chunking
+- 🚀 Fast performance powered by Vite
+- 📱 Responsive modern landing page design
+
+## 🧩 Libraries Used
+
+```bash
+@react-three/fiber
+@react-three/drei
+three
+aos
+react-icons
