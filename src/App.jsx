@@ -15,7 +15,7 @@ const App = () => {
   }, [])
 
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden h-screen'>
       <Navbar />
       <HeroSection />
     </div>

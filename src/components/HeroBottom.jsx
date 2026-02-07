@@ -5,7 +5,7 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 const HeroBottom = () => {
     return (
         <>
-            <div className="absolute sm:top-1/2 left-1/2 top-35 -translate-x-1/2 -translate-y-1/2 z-0 w-full">
+            <div className="absolute sm:top-1/2 left-1/2 -top-35 -translate-x-1/2 -translate-y-1/2 z-0 w-full">
                 <h1 className="text-6xl sm:text-[140px] md:text-[190px] text-center font-bold uppercase text-gray-300/25 ">
                     Doraemon
                 </h1>
@@ -30,7 +30,7 @@ const HeroBottom = () => {
 
                     <div className=" center ">
                         {" "}
-                        <span className="hidden sm:block">
+                        <span className="hidden sm:block animate-bounce">
                             <FaArrowDown />
                         </span>
                     </div>

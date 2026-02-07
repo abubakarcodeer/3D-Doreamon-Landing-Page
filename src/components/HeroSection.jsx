@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { FaStar, FaYoutube } from "react-icons/fa";
-import HeroImg2 from "../assets/dora.png";
+import HeroImg2 from "../assets/dora.webp";
 import HeroBottom from "./HeroBottom";
 import { IoClose } from "react-icons/io5";
 import { Canvas } from '@react-three/fiber'
@@ -39,7 +39,7 @@ const HeroSection = () => {
     };
     return (
         <>
-            <div className=" min-h-[700px] h-screen center relative ">
+            <div className="min-h-[600px] h-[90vh] center relative ">
                 <div className="container pb-20 pt-0 md:pb-0">
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 relative z-10">
 
