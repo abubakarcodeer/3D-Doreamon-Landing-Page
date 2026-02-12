@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaArrowDown } from 'react-icons/fa'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
