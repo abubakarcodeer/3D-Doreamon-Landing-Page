@@ -1,10 +1,11 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { FaStar, FaYoutube } from "react-icons/fa";
 import HeroImg2 from "../assets/dora.webp";
-import HeroBottom from "./HeroBottom";
-import DoremonComponent from "./Doremon";
+// import DoremonComponent from "./Doremon";
 
-const Player = lazy(()=>import("./Player"));
+const HeroBottom = lazy(() => import("./HeroBottom"));
+const Player = lazy(() => import("./Player"));
+const DoremonComponent = lazy(() => import("./Doremon"));
 
 const HeroSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -57,8 +58,10 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="relative order-1">
+              <div className="relative order-1">
+              <Suspense fallback={<div className="text-center text-gray-400">Loading 3D...</div>}>
                 <DoremonComponent windowWidth={windowWidth} />
+              </Suspense>
             </div>
 
             <div
@@ -68,9 +71,9 @@ const HeroSection = () => {
               <div className="flex items-center justify-end">
                 <div className="space-y-4">
                   <img
-                    loading="lazy"
                     src={HeroImg2}
                     alt=""
+                    loading="lazy"
                     className="w-full h-[100px] object-cover rounded-xl shadow-md hover:scale-110 duration-200"
                   />
                   <p className="text-sm text-gray-400 flex items-center gap-2">
@@ -88,7 +91,9 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <HeroBottom />
+        <Suspense fallback={<div>Loading footer...</div>}>
+          <HeroBottom />
+        </Suspense>
       </div>
 
       {/* Video Play section */}

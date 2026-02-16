@@ -1,21 +1,30 @@
 import { OrbitControls, useGLTF } from "@react-three/drei";
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
+
 
 
 function Doraemon({ windowWidth }) {
   const { scene } = useGLTF("/Doraemon.glb");
 
+  // Memoize scale & position to avoid recalculation on every render
   const { scale, position } = useMemo(() => {
-    if (windowWidth >= 1024) {
-      return { scale: 2.3, position: [0, -2, 0] };
-    } else if (windowWidth >= 768) {
-      return { scale: 1.5, position: [0, -1, 0] };
-    } else {
-      return { scale: 3.5, position: [0, -3, 0] };
-    }
+    if (windowWidth >= 1024) return { scale: 2.3, position: [0, -1.5, 0] };
+    return { scale: 3, position: [0, -3.0, 0] };
   }, [windowWidth]);
 
+  // Dispose resources on unmount to prevent WebGL context loss
+  useEffect(() => {
+    return () => {
+      scene.traverse((obj) => {
+        if (obj.isMesh) {
+          obj.geometry.dispose();
+          if (obj.material.map) obj.material.map.dispose();
+          obj.material.dispose();
+        }
+      });
+    };
+  }, [scene]);
   return <primitive object={scene} scale={scale} position={position} />;
 }
 
