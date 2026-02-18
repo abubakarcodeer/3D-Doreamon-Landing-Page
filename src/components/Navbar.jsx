@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { GiAtomicSlashes } from 'react-icons/gi'
 import { MdArrowDropDown } from 'react-icons/md'

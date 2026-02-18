@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div className="overflow-hidden h-screen">
       <Navbar />
-      <Suspense fallback={<div style={{display:"flex", justifyContent:"center"}}>Loading footer...</div>}>
+      <Suspense fallback={<div style={{display:"flex", justifyContent:"center"}}>Loading Section...</div>}>
         <HeroSection />
       </Suspense>
     </div>

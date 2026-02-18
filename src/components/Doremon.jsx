@@ -9,7 +9,8 @@ function Doraemon({ windowWidth }) {
 
   // Memoize scale & position to avoid recalculation on every render
   const { scale, position } = useMemo(() => {
-    if (windowWidth >= 1024) return { scale: 2.3, position: [0, -1.5, 0] };
+    if (windowWidth >= 1024) return { scale: 2, position: [0, -1.5, 0] };
+    else if(windowWidth>=640) return { scale: 1.6, position: [0, -1.5, 0] };
     return { scale: 3, position: [0, -3.0, 0] };
   }, [windowWidth]);
 

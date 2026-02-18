@@ -25,13 +25,13 @@ const HeroSection = () => {
     <>
       <div className="min-h-[600px] h-[90vh] center relative ">
         <div className="container pb-20 pt-0 md:pb-0">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-0 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-0 relative z-10">
             <div className="space-y-3 md:space-y-7 order-2 sm:order-1  flex flex-col justify-center text-center sm:text-left px-10 sm:px-0  ">
               <div data-aos="fade-up">
-                <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold">
+                <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold">
                   Watch Now in
                 </h1>
-                <h1 className="text-6xl font-bold text-primary">3D</h1>
+                <h1 className="text-5xl font-bold text-primary">3D</h1>
               </div>
               <p
                 data-aos="fade-up"
@@ -58,7 +58,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-              <div className="relative order-1">
+              <div className="relative order-1 sm:col-span-2">
               <Suspense fallback={<div className="text-center text-gray-400">Loading 3D...</div>}>
                 <DoremonComponent windowWidth={windowWidth} />
               </Suspense>
@@ -66,7 +66,7 @@ const HeroSection = () => {
 
             <div
               data-aos="slide-left"
-              className="sm:pl-16 order-3 md:pl-24 flex justify-center sm:justify-end "
+              className="sm:pl-16 order-3 flex justify-center sm:justify-end "
             >
               <div className="flex items-center justify-end">
                 <div className="space-y-4">
